@@ -1,0 +1,249 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.header {
+  background-color: #1a1e29;
+}
+
+.header-nav {
+  padding: 0px 16px;
+}
+
+.header-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.header-nav__list-item .header-nav__list-item {
+  margin-left: 50px;
+}
+
+.header-nav__list-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  padding: 27px 0 28px;
+}
+
+.header-nav__list-link svg {
+  margin-left: 4px;
+}
+
+.header-nav__list-link:hover {
+  color: #ff7e00;
+}
+
+.header-nav__list-link:hover svg {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.header-nav__list-link:hover svg path {
+  fill: #ff7e00;
+}
+
+.header-nav .header-content {
+  display: none;
+  position: absolute;
+  background-color: #2b3143;
+  width: 100%;
+  left: 0;
+  top: 88px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 32px 58px 48px;
+}
+
+.header-nav .header-content h2 {
+  color: darkgreen;
+}
+
+.header-nav .header-content__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-nav .header-content__left {
+  max-width: 600px;
+}
+
+.header-nav .header-content__box {
+  width: 100%;
+  padding: 16px 0 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #3e465f;
+  margin-bottom: 16px;
+}
+
+.header-nav .header-content__box:last-child {
+  margin-bottom: 0px;
+}
+
+.header-nav .header-content__box-logo {
+  margin-right: 24px;
+}
+
+.header-nav .header-content__content-title {
+  font-size: 24px;
+  color: #ff850e;
+  margin-bottom: 16px;
+}
+
+.header-nav .header-content__content-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.header-nav .header-content__content-item + .header-content__content-item {
+  margin-left: 8px;
+}
+
+.header-nav .header-content__content-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #e5e5e5;
+}
+
+.header-nav .header-content__right {
+  max-width: 492px;
+  width: 100%;
+}
+
+.header-nav .header-content__right-list {
+  width: 100%;
+}
+
+.header-nav .header-content__right-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #3e465f;
+}
+
+.header-nav .header-content__right-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.header-nav__list-item:hover .header-content {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  display: block;
+}
+
+.header-nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: -28px;
+  position: relative;
+}
+
+.header-nav__logo::after {
+  position: absolute;
+  content: "";
+  height: 96px;
+  width: 96px;
+  background: #1a1e29;
+  border-radius: 16px;
+  top: -16px;
+  z-index: -1;
+}
+/*# sourceMappingURL=style.css.map */
