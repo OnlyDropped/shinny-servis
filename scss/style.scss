@@ -199,6 +199,47 @@
     }
   }
 }
+.slider {
+  width: 100%;
+  //height: 384px;
+}
+//.slider-item {
+//  height: 100%;
+//}
+.slider-card {
+  height: 384px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__box {
+    padding-top: 64px;
+    max-width: 646px;
+    margin-left: auto;
+    height: 100%;
+  }
+  &__title,
+  &__title-span {
+    background-color: #ff7e00;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #fff;
+    width: fit-content;
+  }
+  &__title-span {
+    display: block;
+    margin-bottom: 16px;
+  }
+  &__link {
+    @extend %btn;
+    background: #fff;
+    border: 1px solid #efd8c3;
+    color: #FF7E00;
+  }
+  //.slick-vertical .slick-slide{
+  //  margin-left: -3px !important;
+  //}
+}
 .footer {
   background-color: #ccc;
   padding-top: 56px;
