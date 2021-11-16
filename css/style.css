@@ -1,4 +1,4 @@
-.header-nav .header-content__form-btn, .slider-card__link, .sale__link, .about__info-link, .footer-info__link {
+.header-nav .header-content__form-btn, .slider-card__link, .popular-disky__order-price, .sale__link, .about__info-link, .footer-info__link {
   border: none;
   padding: 12px 24px;
   background: #ff7e00;
@@ -436,6 +436,134 @@ a {
 
 .slider-card .slick-slider {
   left: -1px;
+}
+
+.popular-disky {
+  padding-bottom: 40px;
+}
+
+.popular-disky__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.popular-disky__card {
+  max-width: 288px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.popular-disky__content {
+  width: 100%;
+  height: 288px;
+}
+
+.popular-disky__content-img {
+  margin: auto;
+}
+
+.popular-disky__info {
+  padding: 16px 32px 32px;
+}
+
+.popular-disky__comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+.popular-disky__comment-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 16px;
+}
+
+.popular-disky__comment-num {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6a6a6a;
+  margin-left: 4px;
+}
+
+.popular-disky__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1a1e29;
+  margin-bottom: 8px;
+}
+
+.popular-disky__hashtag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.popular-disky__hashtag-link {
+  background: #ffe9d5;
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  color: #ff7e00;
+  margin-right: 8px;
+}
+
+.popular-disky__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6a6a6a;
+}
+
+.popular-disky__box-num {
+  margin-left: 3px;
+}
+
+.popular-disky__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popular-disky__order-price {
+  padding: 12px 59px;
+}
+
+.popular-disky__order-cart {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  margin-left: 14px;
+  padding: 13px;
 }
 
 .sale {
