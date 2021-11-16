@@ -440,6 +440,11 @@ a {
 
 .popular-disky {
   padding-bottom: 40px;
+  /* Modal Content (Image) */
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  /* Add Animation - Zoom in the Modal */
+  /* The Close Button */
+  /* 100% Image Width on Smaller Screens */
 }
 
 .popular-disky__inner {
@@ -564,6 +569,129 @@ a {
   border-radius: 2px;
   margin-left: 14px;
   padding: 13px;
+}
+
+.popular-disky #myImg,
+.popular-disky #myImg2,
+.popular-disky #myImg3 {
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.popular-disky #myImg:hover,
+.popular-disky #myImg2:hover,
+.popular-disky #myImg3:hover {
+  opacity: 0.7;
+}
+
+.popular-disky #myImg4 {
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.popular-disky #myImg4:hover {
+  opacity: 0.7;
+}
+
+.popular-disky .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 0px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.popular-disky .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.popular-disky #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.popular-disky .modal-content,
+.popular-disky #caption {
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.popular-disky .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.popular-disky .close:hover,
+.popular-disky .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .popular-disky .modal-content {
+    width: 100%;
+  }
+}
+
+.popular-disky .star {
+  z-index: -1;
 }
 
 .sale {
