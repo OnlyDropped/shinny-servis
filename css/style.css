@@ -438,6 +438,68 @@ a {
   left: -1px;
 }
 
+.popular-wheels {
+  padding-bottom: 40px;
+}
+
+.popular-wheels .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+
+.popular-wheels .tabs__link {
+  padding: 11px 16px;
+  border: none;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4c65bd;
+  cursor: pointer;
+}
+
+.popular-wheels .tabs-wrapper .active {
+  color: #ff7e00;
+  border-bottom: 1px solid #ff7e00;
+}
+
+.popular-wheels .tabs-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.popular-wheels .tabs-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popular-wheels__link {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 24px;
+  color: #ff7e00;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .popular-disky {
   padding-bottom: 40px;
   /* Modal Content (Image) */
@@ -478,7 +540,15 @@ a {
 }
 
 .popular-disky__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 16px 32px 32px;
+  height: 312px;
 }
 
 .popular-disky__comment {
@@ -509,12 +579,43 @@ a {
   margin-left: 4px;
 }
 
-.popular-disky__title {
+.popular-disky__box-subtitle {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
   color: #1a1e29;
   margin-bottom: 8px;
+}
+
+.popular-disky__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: auto;
+}
+
+.popular-disky__tags-weather {
+  margin-right: 8px;
+}
+
+.popular-disky__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+.popular-disky__box-title {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6a6a6a;
 }
 
 .popular-disky__hashtag {
@@ -691,7 +792,7 @@ a {
 }
 
 .popular-disky .star {
-  z-index: -1;
+  z-index: 0;
 }
 
 .sale {

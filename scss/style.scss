@@ -245,6 +245,51 @@
     left: -1px;
   }
 }
+
+.popular-wheels {
+  padding-bottom: 40px;
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    &__link {
+      padding: 11px 16px;
+      border: none;
+      background-color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4c65bd;
+      cursor: pointer;
+    }
+  }
+  .tabs-wrapper .active {
+    color: #ff7e00;
+    border-bottom: 1px solid #ff7e00;
+  }
+  .tabs-content {
+    display: flex;
+    margin-bottom: 32px;
+  }
+  .tabs-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 12px 24px;
+    color: #ff7e00;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 .popular-disky {
   padding-bottom: 40px;
   &__inner {
@@ -268,7 +313,10 @@
     margin: auto;
   }
   &__info {
+    display: flex;
+    flex-direction: column;
     padding: 16px 32px 32px;
+    height: 312px;
   }
   &__comment {
     display: flex;
@@ -287,12 +335,32 @@
     color: #6a6a6a;
     margin-left: 4px;
   }
-  &__title {
+  &__box-subtitle {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     color: #1a1e29;
     margin-bottom: 8px;
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    //margin-bottom: 48px;
+    margin-bottom: auto;
+  }
+  &__tags-weather {
+    margin-right: 8px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  &__box-title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6a6a6a;
   }
   &__hashtag {
     display: flex;
@@ -337,7 +405,7 @@
 
   #myImg,
   #myImg2,
-  #myImg3{
+  #myImg3 {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -345,8 +413,8 @@
       opacity: 0.7;
     }
   }
-  #myImg4{
-        border-radius: 5px;
+  #myImg4 {
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
     &:hover {
@@ -426,8 +494,8 @@
       width: 100%;
     }
   }
-  .star{
-    z-index: -1;
+  .star {
+    z-index: 0;
   }
 }
 .sale {
