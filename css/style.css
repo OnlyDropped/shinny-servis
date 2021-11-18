@@ -1,4 +1,4 @@
-.header-nav .header-content__form-btn, .slider-card__link, .popular-disky__order-price, .sale__link, .about__info-link, .footer-info__link {
+.header-nav .header-content__form-btn, .slider-card__link, .selection__link, .popular-disky__order-price, .sale__link, .about__info-link, .footer-info__link {
   border: none;
   padding: 12px 24px;
   background: #ff7e00;
@@ -440,10 +440,27 @@ a {
 
 .selection {
   /* Style the tab */
+  background-image: url("../img/select/bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 16px;
+  padding-bottom: 73px;
+  margin-top: -70px;
+  position: relative;
+  z-index: 1;
   /* Style the buttons that are used to open the tab content */
   /* Change background color of buttons on hover */
   /* Create an active/current tablink class */
   /* Style the tab content */
+}
+
+.selection__link {
+  display: block;
+  margin: 0 auto;
+  margin-top: 26px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .selection .tab {
@@ -502,6 +519,18 @@ a {
 
 .jq-selectbox {
   width: 184px;
+}
+
+.jq-selectbox__select {
+  height: 32px;
+  padding: 0 45px 0 10px;
+  background: #f5f5f5;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  color: #6a6a6a;
 }
 
 .services {
@@ -674,6 +703,13 @@ a {
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.popular-disky__card:hover {
+  -webkit-box-shadow: #ccc 0px 8px 68px;
+          box-shadow: #ccc 0px 8px 68px;
 }
 
 .popular-disky__content {
@@ -1110,7 +1146,7 @@ a {
 }
 
 .footer {
-  background-color: #ccc;
+  background-color: #fff;
   padding-top: 56px;
   padding-bottom: 57px;
   background-image: url("../img/icon/footer-logo.svg");
@@ -1225,5 +1261,14 @@ a {
 .footer-info__title-link {
   display: block;
   margin: 0 auto;
+}
+
+.df {
+  background-color: #ff7e00 !important;
+  color: #4c65bd;
+}
+
+.kk {
+  background-color: tomato;
 }
 /*# sourceMappingURL=style.css.map */
