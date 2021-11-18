@@ -438,6 +438,72 @@ a {
   left: -1px;
 }
 
+.selection {
+  /* Style the tab */
+  /* Style the buttons that are used to open the tab content */
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */
+  /* Style the tab content */
+}
+
+.selection .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.selection .tab__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #1a1e29;
+}
+
+.selection .tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.selection .tab button.active {
+  background-color: inherit;
+}
+
+.selection .tabcontent {
+  display: none;
+  border: none;
+  padding: 0px;
+}
+
+.selection .tabcontent__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+}
+
+.jq-selectbox {
+  width: 184px;
+}
+
 .services {
   padding-bottom: 40px;
 }

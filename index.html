@@ -8,7 +8,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
     />
+    <link rel="stylesheet" href="css/jquery.formstyler.css" />
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css" />
     <link rel="stylesheet" href="css/slick.css" />
+    <style>
+      .jq-selectbox__select {
+        height: 32px;
+        padding: 0 45px 0 10px;
+        border: 1px solid #E5E5E5;
+        border-radius: 2px;
+        background: linear-gradient(rgb(255 255 255),rgb(255 255 255));
+        box-shadow: none;
+        color: #1A1E29;
+        text-shadow: none;
+        padding-left: 16px;
+      }
+      .jq-selectbox__select:hover{
+        background: linear-gradient(rgb(255 255 255),rgb(255 255 255));
+      }
+    </style>
     <link rel="stylesheet" href="css/style.css" />
     <title>Шинный центр</title>
   </head>
@@ -646,26 +664,156 @@
           </div>
         </div>
       </section>
+      <section class="selection">
+        <div class="container">
+          <!-- Tab links -->
+          <div class="tab">
+            <span class="tab__link">Подберём</span>
+            <button
+              class="tablinks tab__link"
+              onclick="openCity(event, 'London')"
+              id="defaultOpen"
+              style="border-bottom: 2px solid #ff7e00"
+            >
+              шины
+            </button>
+            <span class="tab__link">или</span>
+            <button
+              class="tablinks tab__link"
+              onclick="openCity(event, 'Paris')"
+              style="color: #4c65bd; border-bottom: 2px dashed #4c65bd"
+            >
+              диски
+            </button>
+            <span class="tab__link">по</span>
+            <button
+              class="tablinks tab__link"
+              onclick="openCity(event, 'Tokyo')"
+              style="border-bottom: 2px solid #ff7e00"
+            >
+              марке автомобиля
+            </button>
+            <span class="tab__link">или</span>
+            <button
+              class="tablinks tab__link"
+              onclick="openCity(event, 'Moscow')"
+              style="color: #4c65bd; border-bottom: 2px dashed #4c65bd"
+            >
+              параметрам товара
+            </button>
+          </div>
+
+          <!-- Tab content -->
+          <div
+            class="tabcontent"
+            id="London"
+            style="border: none; padding: 0px"
+          >
+            <form class="tabcontent__form" action="#">
+              <select class="tabcontent__form-select" name="" id="">
+                <option value="">Производитель</option>
+                <option value="">Audi</option>
+                <option value="">BMW</option>
+                <option value="">Renault</option>
+                <option value="">Toyota</option>
+              </select>
+              <select class="tabcontent__form-select" name="" id="">
+                <option value="">Модель</option>
+                <option value="">Audi</option>
+                <option value="">BMW</option>
+                <option value="">Renault</option>
+                <option value="">Toyota</option>
+              </select>
+              <select class="tabcontent__form-select" name="" id="">
+                <option value="">Поколение</option>
+                <option value="">Audi</option>
+                <option value="">BMW</option>
+                <option value="">Renault</option>
+                <option value="">Toyota</option>
+              </select>
+              <select class="tabcontent__form-select" name="" id="">
+                <option value="">Модификация</option>
+                <option value="">Audi</option>
+                <option value="">BMW</option>
+                <option value="">Renault</option>
+                <option value="">Toyota</option>
+              </select>
+              <select class="tabcontent__form-select" name="" id="">
+                <option value="">Кузов</option>
+                <option value="">Audi</option>
+                <option value="">BMW</option>
+                <option value="">Renault</option>
+                <option value="">Toyota</option>
+              </select>
+            </form>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <h3>диски</h3>
+            <p>Paris is the capital of France.</p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <h3>марке автомобиля</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+          <div id="Moscow" class="tabcontent">
+            <h3>параметрам товара</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+        </div>
+      </section>
       <div class="services">
         <div class="container">
           <h2 class="title services__title">Популярные услуги</h2>
           <div class="services__wrapper">
             <div class="services-item">
               <div class="services-item__content">
-                <img class="services-item__content-img" src="img/service/1.png" alt="bg">
+                <img
+                  class="services-item__content-img"
+                  src="img/service/1.png"
+                  alt="bg"
+                />
               </div>
-              <div class="services-item__info" >
-                <div class="services-item__box" style="background-image: url('img/sale/block.svg')" >
+              <div class="services-item__info">
+                <div
+                  class="services-item__box"
+                  style="background-image: url('img/sale/block.svg')"
+                >
                   <h6 class="services-item__box-title">Шиномонтаж</h6>
                   <div class="services-item__break">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM7.5 6.79289V3H6.5V7.20711L8.64645 9.35355L9.35355 8.64645L7.5 6.79289Z" fill="#6A6A6A"/>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM7.5 6.79289V3H6.5V7.20711L8.64645 9.35355L9.35355 8.64645L7.5 6.79289Z"
+                        fill="#6A6A6A"
+                      />
                     </svg>
-                    <span class="services-item__break-span">Ежедневно с 9:00 до 21:00, без перерывов</span>
+                    <span class="services-item__break-span"
+                      >Ежедневно с 9:00 до 21:00, без перерывов</span
+                    >
                   </div>
                   <div class="services-item__price">
-                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V1H2V7H0V8H2V10H0V11H2V13H3V11H9V10H3V8H8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0H3H2ZM3 1V7H8C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1L3 1Z" fill="#6A6A6A"/>
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 12 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2 0H0V1H2V7H0V8H2V10H0V11H2V13H3V11H9V10H3V8H8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0H3H2ZM3 1V7H8C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1L3 1Z"
+                        fill="#6A6A6A"
+                      />
                     </svg>
                     <span class="services-item__price-span">от 500 ₽</span>
                   </div>
@@ -674,20 +822,53 @@
             </div>
             <div class="services-item">
               <div class="services-item__content">
-                <img class="services-item__content-img" src="img/service/2.png" alt="bg">
+                <img
+                  class="services-item__content-img"
+                  src="img/service/2.png"
+                  alt="bg"
+                />
               </div>
-              <div class="services-item__info" >
-                <div class="services-item__box" style="background-image: url('img/sale/block.svg')" >
-                  <h6 class="services-item__box-title">Ремонт и правка дисков</h6>
+              <div class="services-item__info">
+                <div
+                  class="services-item__box"
+                  style="background-image: url('img/sale/block.svg')"
+                >
+                  <h6 class="services-item__box-title">
+                    Ремонт и правка дисков
+                  </h6>
                   <div class="services-item__break">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM7.5 6.79289V3H6.5V7.20711L8.64645 9.35355L9.35355 8.64645L7.5 6.79289Z" fill="#6A6A6A"/>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM7.5 6.79289V3H6.5V7.20711L8.64645 9.35355L9.35355 8.64645L7.5 6.79289Z"
+                        fill="#6A6A6A"
+                      />
                     </svg>
-                    <span class="services-item__break-span">Ежедневно с 9:00 до 21:00, без перерывов</span>
+                    <span class="services-item__break-span"
+                      >Ежедневно с 9:00 до 21:00, без перерывов</span
+                    >
                   </div>
                   <div class="services-item__price">
-                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V1H2V7H0V8H2V10H0V11H2V13H3V11H9V10H3V8H8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0H3H2ZM3 1V7H8C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1L3 1Z" fill="#6A6A6A"/>
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 12 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2 0H0V1H2V7H0V8H2V10H0V11H2V13H3V11H9V10H3V8H8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0H3H2ZM3 1V7H8C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1L3 1Z"
+                        fill="#6A6A6A"
+                      />
                     </svg>
                     <span class="services-item__price-span">от 800 ₽</span>
                   </div>
@@ -696,20 +877,53 @@
             </div>
             <div class="services-item">
               <div class="services-item__content">
-                <img class="services-item__content-img" src="img/service/3.png" alt="bg">
+                <img
+                  class="services-item__content-img"
+                  src="img/service/3.png"
+                  alt="bg"
+                />
               </div>
-              <div class="services-item__info" >
-                <div class="services-item__box" style="background-image: url('img/sale/block.svg')" >
-                  <h6 class="services-item__box-title">Сезонное хранение шин</h6>
+              <div class="services-item__info">
+                <div
+                  class="services-item__box"
+                  style="background-image: url('img/sale/block.svg')"
+                >
+                  <h6 class="services-item__box-title">
+                    Сезонное хранение шин
+                  </h6>
                   <div class="services-item__break">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM7.5 6.79289V3H6.5V7.20711L8.64645 9.35355L9.35355 8.64645L7.5 6.79289Z" fill="#6A6A6A"/>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM7.5 6.79289V3H6.5V7.20711L8.64645 9.35355L9.35355 8.64645L7.5 6.79289Z"
+                        fill="#6A6A6A"
+                      />
                     </svg>
-                    <span class="services-item__break-span">Ежедневно с 9:00 до 21:00, без перерывов</span>
+                    <span class="services-item__break-span"
+                      >Ежедневно с 9:00 до 21:00, без перерывов</span
+                    >
                   </div>
                   <div class="services-item__price">
-                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0V1H2V7H0V8H2V10H0V11H2V13H3V11H9V10H3V8H8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0H3H2ZM3 1V7H8C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1L3 1Z" fill="#6A6A6A"/>
+                    <svg
+                      width="12"
+                      height="13"
+                      viewBox="0 0 12 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2 0H0V1H2V7H0V8H2V10H0V11H2V13H3V11H9V10H3V8H8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0H3H2ZM3 1V7H8C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1L3 1Z"
+                        fill="#6A6A6A"
+                      />
                     </svg>
                     <span class="services-item__price-span">Бесплатно</span>
                   </div>
@@ -724,635 +938,697 @@
         <div class="container">
           <h2 class="title popular-wheels__title">Популярные шины</h2>
           <div class="popular-wheels__inner">
-
             <div class="tabs-wrapper">
-	            <div class="tabs">
-	            	<span class="tab tabs__link">Автомобильные</span>
-	            	<span class="tab tabs__link ">Грузовые</span>
-	            	<span class="tab tabs__link ">Мотошины</span>
-	            </div>
-	            <div class="tabs-content">
-	            	<div class="tab-item" style="display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 24px;">
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Goodyear Vector 4Seasons
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Goodyear Vector 4Seasons SUV Gen-2
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Cordiant Snow Cross 2
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
+              <div class="tabs">
+                <span class="tab tabs__link">Автомобильные</span>
+                <span class="tab tabs__link">Грузовые</span>
+                <span class="tab tabs__link">Мотошины</span>
+              </div>
+              <div class="tabs-content">
+                <div
+                  class="tab-item"
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 24px;
+                  "
+                >
                   <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Pirelli PZero
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
                       />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                </div>
-	            		            	<div class="tab-item" style="display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 24px;" >
-                                  <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Goodyear Vector 4Seasons
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Goodyear Vector 4Seasons
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Goodyear Vector 4Seasons SUV Gen-2
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Cordiant Snow Cross 2
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
                   <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Pirelli PZero
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
                       />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                </div>
-	            	<div class="tab-item" style="display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 24px;" >
-                                  <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Goodyear Vector 4Seasons
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Goodyear Vector 4Seasons SUV Gen-2
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Goodyear Vector 4Seasons SUV Gen-2
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
-                <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Cordiant Snow Cross 2
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                </div>
-                </div>
                   <div class="popular-disky__card">
-                <div class="popular-disky__content">
-                  <img class="popular-disky__content-img"
-                    src="img/wheel/1.png"/>
-                </div>
-                <div class="popular-disky__info">
-                <div class="popular-disky__comment">
-                  <a class="popular-disky__comment-link" href="#">
-                    <img
-                      class="popular-disky__comment-img"
-                      src="img/icon/comment.svg"
-                      alt=""
-                    />
-                    <span class="popular-disky__comment-num">2</span>
-                  </a>
-                  <div class="star"></div>
-                </div>
-                <h6 class="popular-disky__box-subtitle">
-                  Pirelli PZero
-                </h6>
-                <div class="popular-disky__tags">
-                  <div class="popular-disky__tags-weather">
-                    <img src="img/icon/sun.svg" alt="">
-                  </div>
-                  <div class="popular-disky__tags-block">
-                    <img src="img/icon/icon.svg" alt="">
-                  </div>
-                </div>
-                <div class="popular-disky__box">
-                  <p class="popular-disky__box-title">В наличии:</p>
-                  <span class="popular-disky__box-num">14 шт.</span>
-                </div>
-                <div class="popular-disky__order">
-                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
-                  <a class="popular-disky__order-cart" href="#">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
-                        stroke="#FF7E00"
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
                       />
-                    </svg>
-                  </a>
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Cordiant Snow Cross 2
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">Pirelli PZero</h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div
+                  class="tab-item"
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 24px;
+                  "
+                >
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Goodyear Vector 4Seasons
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Goodyear Vector 4Seasons SUV Gen-2
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Cordiant Snow Cross 2
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">Pirelli PZero</h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div
+                  class="tab-item"
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 24px;
+                  "
+                >
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Goodyear Vector 4Seasons
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Goodyear Vector 4Seasons SUV Gen-2
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">
+                        Cordiant Snow Cross 2
+                      </h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular-disky__card">
+                    <div class="popular-disky__content">
+                      <img
+                        class="popular-disky__content-img"
+                        src="img/wheel/1.png"
+                      />
+                    </div>
+                    <div class="popular-disky__info">
+                      <div class="popular-disky__comment">
+                        <a class="popular-disky__comment-link" href="#">
+                          <img
+                            class="popular-disky__comment-img"
+                            src="img/icon/comment.svg"
+                            alt=""
+                          />
+                          <span class="popular-disky__comment-num">2</span>
+                        </a>
+                        <div class="star"></div>
+                      </div>
+                      <h6 class="popular-disky__box-subtitle">Pirelli PZero</h6>
+                      <div class="popular-disky__tags">
+                        <div class="popular-disky__tags-weather">
+                          <img src="img/icon/sun.svg" alt="" />
+                        </div>
+                        <div class="popular-disky__tags-block">
+                          <img src="img/icon/icon.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="popular-disky__box">
+                        <p class="popular-disky__box-title">В наличии:</p>
+                        <span class="popular-disky__box-num">14 шт.</span>
+                      </div>
+                      <div class="popular-disky__order">
+                        <a class="popular-disky__order-price" href="#"
+                          >5 600 ₽</a
+                        >
+                        <a class="popular-disky__order-cart" href="#">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                              stroke="#FF7E00"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-	            </div>
+              </div>
             </div>
-          <a class="popular-wheels__link" href="#">Посмотреть все шины</a>
+            <a class="popular-wheels__link" href="#">Посмотреть все шины</a>
           </div>
         </div>
       </section>
@@ -1911,7 +2187,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" style="background-color: #fff;">
       <div class="container">
         <div class="footer__wrapper">
           <div class="footer-item">
@@ -2087,6 +2363,7 @@
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
   </body>
