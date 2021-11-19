@@ -140,11 +140,22 @@
       border: none;
       padding: 12px 16px;
       background-color: #fff;
+      transition: all .5s cubic-bezier(0.23, 1, 0.320, 1);
       &::placeholder {
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
         color: #1a1e29;
+      }
+      &:hover {
+        color: #ff7e00;
+        //border: 1px solid #ff7e00;
+        //border-radius: 2px;
+        border-color: #ff7e00;
+        transition: all 0.6s;
+        &::placeholder {
+          color: #ff7e00;
+        }
       }
     }
     &__form-btn {
@@ -262,6 +273,7 @@
     margin: 0 auto;
     margin-top: 26px;
     width: fit-content;
+    padding: 12px 80px;
   }
   .tab {
     display: flex;
@@ -308,11 +320,11 @@
   }
 }
 .jq-selectbox {
-  width: 184px;
+  width: 185px;
 }
 .jq-selectbox__select {
   height: 32px;
-  padding: 0 45px 0 10px;
+  padding: 0 50px 0 16px;
   background: #f5f5f5;
   box-shadow: none;
   text-shadow: none;
@@ -320,9 +332,9 @@
   border-radius: 2px;
   color: #6a6a6a;
 }
-//.jq-selectbox {
-//  width: 184px;
-//}
+.jq-selectbox__select:hover {
+  background: #f5f5f5;
+}
 //.jq-selectbox__select {
 //  height: 32px;
 //  padding: 0 45px 0 10px;
@@ -337,6 +349,52 @@
 //.jq-selectbox__select:hover {
 //  background: linear-gradient(rgb(255 255 255), rgb(255 255 255));
 //}
+.jq-selectbox__trigger {
+  background-image: url("../img/select/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  //background-color: aquamarine;
+  border: none;
+  width: 10px;
+  right: 17px;
+}
+.jq-selectbox__trigger-arrow {
+  border: none;
+}
+.jq-selectbox__dropdown {
+  width: 100%;
+  margin: 4px 0 0;
+  padding: 0;
+  border: none;
+  //font: 14px / 18px Arial, sans-serif;
+  //box-shadow: 0px 2px 4px rgba(172, 85, 0, 0.08), 0px 8px 32px rgba(255, 126, 0, 0.16);
+  border-radius: 2px;
+}
+.jq-selectbox li.selected {
+  background: #ff7e00;
+  color: #fff;
+}
+.jq-selectbox li:hover {
+  background: #ff7e00;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+.jq-selectbox li {
+  height: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1a1e29;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e5e5;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
 .services {
   padding-bottom: 40px;
   &__wrapper {
@@ -529,6 +587,11 @@
     line-height: 16px;
     color: #ff7e00;
     margin-right: 8px;
+    transition: all 0.6s;
+    &:hover {
+      color: #fff;
+      background: #ff7e00;
+    }
   }
   &__box {
     display: flex;
@@ -717,6 +780,11 @@
     line-height: 16px;
     color: #ff7e00;
     margin-right: 8px;
+    transition: all 0.6s;
+    &:hover {
+      color: #fff;
+      background: #ff7e00;
+    }
   }
   &__time {
     display: flex;
@@ -866,11 +934,8 @@
     margin: 0 auto;
   }
 }
-.df {
-  background-color: #ff7e00 !important;
-  color: #4c65bd;
-}
-.kk {
-  background-color: tomato;
+input:hover {
+  color: #ff7e00;
+  border-color: #ff7e00;
 }
 @import "media";
