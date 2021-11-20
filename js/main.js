@@ -161,3 +161,22 @@ document.getElementById("defaultOpen").click();
 
 
 $('.tabcontent__form-select').styler();
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Показать всё";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Свернуть";
+    moreText.style.display = "inline";
+  }
+}
+
+
+$(".js-range-slider").ionRangeSlider();
