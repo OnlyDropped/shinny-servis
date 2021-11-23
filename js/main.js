@@ -180,3 +180,6 @@ function myFunction() {
 
 
 $(".js-range-slider").ionRangeSlider();
+
+
+
