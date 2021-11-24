@@ -2000,10 +2000,33 @@
         color: #6a6a6a;
         margin-bottom: 24px;
       }
-      &__btn{
+      &__btn {
         @extend %btn2;
       }
     }
+  }
+}
+.card-content {
+  padding-bottom: 72px;
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    color: #1a1e29;
+    margin-bottom: 32px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 24px;
+    margin-bottom: 32px;
+  }
+  &__link {
+    @extend %btn2;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
   }
 }
 .footer {

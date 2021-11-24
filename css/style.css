@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-.catalof-filter__btn, .catalog-content__pagination-btn, .catalog-content__banner-link, .card-body .modal-content__close-btn, .card-description .tab-item .tab-review__btn {
+.catalof-filter__btn, .catalog-content__pagination-btn, .catalog-content__banner-link, .card-body .modal-content__close-btn, .card-description .tab-item .tab-review__btn, .card-content__link {
   background: #fff;
   border: 1px solid #efd8c3;
   border-radius: 2px;
@@ -2744,6 +2744,37 @@ a {
   line-height: 24px;
   color: #6a6a6a;
   margin-bottom: 24px;
+}
+
+.card-content {
+  padding-bottom: 72px;
+}
+
+.card-content__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #1a1e29;
+  margin-bottom: 32px;
+}
+
+.card-content__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-column: 24;
+  grid-column: 24px;
+  margin-bottom: 32px;
+}
+
+.card-content__link {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .footer {
