@@ -2262,11 +2262,90 @@
     color: #fff;
     margin-bottom: 17px;
   }
-  &__inner-link{
+  &__inner-link {
     @extend %btn;
     display: block;
     margin: 48px auto 0px;
     width: fit-content;
+  }
+}
+.about-company {
+  &__info{
+    margin-bottom: 24px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #1a1e29;
+    margin-bottom: 24px;
+  }
+  .tabs-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+  .tabs {
+    max-width: 288px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .tab {
+    padding: 8px 13px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4c65bd;
+    cursor: pointer;
+  }
+  .tabs-wrapper .active {
+    color: #1a1e29;
+    border-left: 2px solid #ff7e00;
+  }
+  .tabs-content {
+    max-width: 808px;
+    width: 100%;
+  }
+  .tab-item {
+    max-width: 808px;
+    width: 100%;
+    //&__about {
+    //  background-color: lightcoral;
+    //}
+    &__img {
+      width: 808px;
+      height: 440px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 24px;
+    }
+    &__box {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    &__box-title {
+      margin-bottom: 16px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #1a1e29;
+    }
+    &__box-text,
+    &__box-item,
+    &__box-subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #6a6a6a;
+    }
+    &__box-item{
+      margin-bottom: 0;
+    }
   }
 }
 .footer {
