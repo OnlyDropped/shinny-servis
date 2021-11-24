@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.header-nav .header-content__form-btn, .slider-card__link, .selection__link, .popular-disky__order-price, .sale__link, .about__info-link, .catalof-filter__link, .card-description .tab-item .tab-review__link, .cart-inner__calc-btn, .footer-info__link {
+.header-nav .header-content__form-btn, .slider-card__link, .selection__link, .popular-disky__order-price, .sale__link, .about__info-link, .catalof-filter__link, .card-description .tab-item .tab-review__link, .cart-inner__calc-btn, .page-404__inner-link, .footer-info__link {
   border: none;
   padding: 12px 24px;
   background: #ff7e00;
@@ -3044,8 +3044,34 @@ a {
 }
 
 .cart-inner .slider {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(196, 196, 196, 0)), to(#C4C4C4));
-  background: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 100%);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(196, 196, 196, 0)), to(#c4c4c4));
+  background: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #c4c4c4 100%);
+}
+
+.page-404 {
+  background-color: #3e465f;
+}
+
+.page-404__inner {
+  padding-top: 47px;
+  padding-bottom: 361px;
+  text-align: center;
+}
+
+.page-404__inner-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #fff;
+  margin-bottom: 17px;
+}
+
+.page-404__inner-link {
+  display: block;
+  margin: 48px auto 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .footer {

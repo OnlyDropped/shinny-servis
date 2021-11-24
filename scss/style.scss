@@ -2244,8 +2244,29 @@
     color: #1a1e29;
     margin-bottom: 24px;
   }
-  .slider{
-    background: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 100%);
+  .slider {
+    background: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #c4c4c4 100%);
+  }
+}
+.page-404 {
+  background-color: #3e465f;
+  &__inner {
+    padding-top: 47px;
+    padding-bottom: 361px;
+    text-align: center;
+  }
+  &__inner-title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #fff;
+    margin-bottom: 17px;
+  }
+  &__inner-link{
+    @extend %btn;
+    display: block;
+    margin: 48px auto 0px;
+    width: fit-content;
   }
 }
 .footer {
