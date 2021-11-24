@@ -166,6 +166,7 @@ a {
   width: 100%;
   left: 0;
   top: 88px;
+  top: 79px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -3168,6 +3169,35 @@ a {
 
 .about-company .tab-item__box-item {
   margin-bottom: 0;
+}
+
+.news__title {
+  text-align: center;
+}
+
+.news__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  row-gap: 24px;
+}
+
+.news__content {
+  width: 392px;
+  height: 272px;
+  background-color: #E5E5E5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer {
