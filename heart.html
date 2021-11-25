@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/jquery.formstyler.css" />
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Шинный центр</title>
   </head>
@@ -620,305 +625,191 @@
                 <a class="breadcrumbs-wrapper__list-link" href="#">Главная</a>
               </li>
               <li class="breadcrumbs-wrapper__list-item">
-                <a class="breadcrumbs-wrapper__list-link" href="#"
-                  >Новости и статьи</a
-                >
+                <a class="breadcrumbs-wrapper__list-link" href="#">Избранное</a>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="sale news">
+      <sectiion class="favourites">
         <div class="container">
-          <h1 class="title sale__title new__title">Новости и статьи</h1>
-          <div class="sale-slider news__inner">
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content">
-                  <img src="img/about/1.png" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Примем на работу менеджера торгового зала и сотрудника
-                      шиномонтажа</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#"
-                        >Приём на работу</a
-                      >
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
+          <div class="favourites__inner">
+            <h1 class="favourites__inner-title">Избранное</h1>
+            <div class="favourites__filter">
+              <form class="favourites__form" action="#">
+                <select class="favourites__form-select" style="z-index: -1">
+                  <option value="">Сначала дорогие</option>
+                  <option value="">Сначала дешевле</option>
+                  <option value="">По возрастанию</option>
+                  <option value="">По убыванию</option>
+                </select>
+              </form>
+              <div class="favourites__box">
+                <p class="favourites__box-text">Товаров</p>
+                <div class="favourites__box-number">: 3 492</div>
+              </div>
+              <a class="favourites__reset" href="#">Очистить всё</a>
+            </div>
+          </div>
+        </div>
+      </sectiion>
+      <section class="heart-wheel">
+        <div class="container">
+          <div class="heart-wheel__inner">
+            <div class="popular-disky__card">
+              <div class="popular-disky__content">
+                <img class="popular-disky__content-img" src="img/wheel/1.png" />
+              </div>
+              <div class="popular-disky__info">
+                <div class="popular-disky__comment">
+                  <a class="popular-disky__comment-link" href="#">
                     <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
+                      class="popular-disky__comment-img"
+                      src="img/icon/comment.svg"
                       alt=""
                     />
-                    <span class="sale-slider__time-date">12.04.2021</span>
+                    <span class="popular-disky__comment-num">2</span>
+                  </a>
+                  <div class="star"></div>
+                </div>
+                <h6 class="popular-disky__box-subtitle">
+                  Goodyear Vector 4Seasons
+                </h6>
+                <div class="popular-disky__tags">
+                  <div class="popular-disky__tags-weather">
+                    <img src="img/icon/sun.svg" alt="" />
                   </div>
+                  <div class="popular-disky__tags-block">
+                    <img src="img/icon/icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="popular-disky__box">
+                  <p class="popular-disky__box-title">В наличии:</p>
+                  <span class="popular-disky__box-num">14 шт.</span>
+                </div>
+                <div class="popular-disky__order">
+                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
+                  <a class="popular-disky__order-cart" href="#">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                        stroke="#FF7E00"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content">
-                  <img src="img/about/2.png" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Принимаем карты «Халва» банка Совкомбанк</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#">Диски</a>
-                      <a class="sale-slider__hashtag-link" href="#">Шины</a>
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
+            <div class="popular-disky__card">
+              <div class="popular-disky__content">
+                <img class="popular-disky__content-img" src="img/wheel/1.png" />
+              </div>
+              <div class="popular-disky__info">
+                <div class="popular-disky__comment">
+                  <a class="popular-disky__comment-link" href="#">
                     <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
+                      class="popular-disky__comment-img"
+                      src="img/icon/comment.svg"
                       alt=""
                     />
-                    <span class="sale-slider__time-date">12.04.2021</span>
+                    <span class="popular-disky__comment-num">2</span>
+                  </a>
+                  <div class="star"></div>
+                </div>
+                <h6 class="popular-disky__box-subtitle">
+                  Goodyear Vector 4Seasons
+                </h6>
+                <div class="popular-disky__tags">
+                  <div class="popular-disky__tags-weather">
+                    <img src="img/icon/sun.svg" alt="" />
                   </div>
+                  <div class="popular-disky__tags-block">
+                    <img src="img/icon/icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="popular-disky__box">
+                  <p class="popular-disky__box-title">В наличии:</p>
+                  <span class="popular-disky__box-num">14 шт.</span>
+                </div>
+                <div class="popular-disky__order">
+                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
+                  <a class="popular-disky__order-cart" href="#">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                        stroke="#FF7E00"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content">
-                  <img src="img/about/3.png" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Покупайте новую АКБ со скидкой до 1500 рублей и
-                      бесплатной заменой!</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#">Диски</a>
-                      <a class="sale-slider__hashtag-link" href="#">Шины</a>
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
-                    <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
-                      alt=""
-                    />
-                    <span class="sale-slider__time-date">12.04.2021</span>
-                  </div>
-                </div>
+            <div class="popular-disky__card">
+              <div class="popular-disky__content">
+                <img class="popular-disky__content-img" src="img/wheel/1.png" />
               </div>
-            </div>
-
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content news__content">
-                  <img src="img/news/icon.svg" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Примем на работу менеджера торгового зала и сотрудника
-                      шиномонтажа</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#"
-                        >Приём на работу</a
-                      >
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
+              <div class="popular-disky__info">
+                <div class="popular-disky__comment">
+                  <a class="popular-disky__comment-link" href="#">
                     <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
+                      class="popular-disky__comment-img"
+                      src="img/icon/comment.svg"
                       alt=""
                     />
-                    <span class="sale-slider__time-date">12.04.2021</span>
+                    <span class="popular-disky__comment-num">2</span>
+                  </a>
+                  <div class="star"></div>
+                </div>
+                <h6 class="popular-disky__box-subtitle">
+                  Goodyear Vector 4Seasons
+                </h6>
+                <div class="popular-disky__tags">
+                  <div class="popular-disky__tags-weather">
+                    <img src="img/icon/sun.svg" alt="" />
+                  </div>
+                  <div class="popular-disky__tags-block">
+                    <img src="img/icon/icon.svg" alt="" />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content news__content">
-                  <img src="img/news/icon.svg" alt="" />
+                <div class="popular-disky__box">
+                  <p class="popular-disky__box-title">В наличии:</p>
+                  <span class="popular-disky__box-num">14 шт.</span>
                 </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Принимаем карты «Халва» банка Совкомбанк</a
+                <div class="popular-disky__order">
+                  <a class="popular-disky__order-price" href="#">5 600 ₽</a>
+                  <a class="popular-disky__order-cart" href="#">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#">Диски</a>
-                      <a class="sale-slider__hashtag-link" href="#">Шины</a>
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
-                    <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
-                      alt=""
-                    />
-                    <span class="sale-slider__time-date">12.04.2021</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content news__content">
-                  <img src="img/news/icon.svg" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Покупайте новую АКБ со скидкой до 1500 рублей и
-                      бесплатной заменой!</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#">Диски</a>
-                      <a class="sale-slider__hashtag-link" href="#">Шины</a>
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
-                    <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
-                      alt=""
-                    />
-                    <span class="sale-slider__time-date">12.04.2021</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content news__content">
-                  <img src="img/news/icon.svg" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Примем на работу менеджера торгового зала и сотрудника
-                      шиномонтажа</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#"
-                        >Приём на работу</a
-                      >
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
-                    <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
-                      alt=""
-                    />
-                    <span class="sale-slider__time-date">12.04.2021</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content news__content">
-                  <img src="img/news/icon.svg" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Принимаем карты «Халва» банка Совкомбанк</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#">Диски</a>
-                      <a class="sale-slider__hashtag-link" href="#">Шины</a>
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
-                    <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
-                      alt=""
-                    />
-                    <span class="sale-slider__time-date">12.04.2021</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sale-slider__card">
-              <div class="sale-slider__item">
-                <div class="sale-slider__content news__content">
-                  <img src="img/news/icon.svg" alt="" />
-                </div>
-                <div class="sale-slider__info">
-                  <div
-                    class="sale-slider__box"
-                    style="background-image: url('img/sale/block.svg')"
-                  >
-                    <a class="sale-slider__box-link" href="#"
-                      >Покупайте новую АКБ со скидкой до 1500 рублей и
-                      бесплатной заменой!</a
-                    >
-                    <div class="sale-slider__hashtag">
-                      <a class="sale-slider__hashtag-link" href="#">Диски</a>
-                      <a class="sale-slider__hashtag-link" href="#">Шины</a>
-                    </div>
-                  </div>
-
-                  <div class="sale-slider__time">
-                    <img
-                      class="sale-slider__time-icon"
-                      src="img/about/time.svg"
-                      alt=""
-                    />
-                    <span class="sale-slider__time-date">12.04.2021</span>
-                  </div>
+                      <path
+                        d="M6.55309 2.22422L6.55331 2.22465L6.55334 2.2247L6.55348 2.22498L7 3.11803L7.44652 2.22498L7.44667 2.2247L7.44669 2.22465L7.44691 2.22421L7.44705 2.22393L7.44724 2.22358L7.4529 2.21283C7.45854 2.20225 7.46791 2.18503 7.481 2.16213C7.50721 2.11627 7.54808 2.04801 7.60353 1.96485C7.71498 1.79768 7.88216 1.57495 8.10355 1.35355C8.54906 0.908051 9.17938 0.5 10 0.5C10.9257 0.5 11.7979 0.732398 12.4299 1.25911C13.0459 1.77246 13.5 2.62024 13.5 4C13.5 6.71736 12.1976 9.53246 7 13.3799C1.80237 9.53246 0.5 6.71736 0.5 4C0.5 2.62024 0.954078 1.77246 1.57009 1.25911C2.20215 0.732398 3.07429 0.5 4 0.5C4.82062 0.5 5.45095 0.908051 5.89645 1.35355C6.11784 1.57495 6.28503 1.79768 6.39648 1.96485C6.45192 2.04801 6.4928 2.11627 6.51901 2.16213C6.53209 2.18503 6.54146 2.20225 6.54711 2.21283L6.55276 2.22358L6.55309 2.22422Z"
+                        stroke="#FF7E00"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          <a class="sale__link" href="#">Показать ещё 10 из 32</a>
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
@@ -1093,5 +984,10 @@
         </div>
       </div>
     </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script>
+      $(".favourites__form-select").styler();
+    </script>
   </body>
 </html>

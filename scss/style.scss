@@ -49,6 +49,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 32px 58px 48px;
+    z-index: 1111;
     h2 {
       color: darkgreen;
     }
@@ -873,7 +874,7 @@
       height: 4px;
       left: 0px;
       transform: rotate(90deg);
-      top: 7px;
+      top: 10px;
     }
     &:first-child {
       padding-left: 0px;
@@ -2271,7 +2272,7 @@
   }
 }
 .about-company {
-  &__info{
+  &__info {
     margin-bottom: 24px;
   }
   &__title {
@@ -2344,28 +2345,74 @@
       line-height: 24px;
       color: #6a6a6a;
     }
-    &__box-item{
+    &__box-item {
       margin-bottom: 0;
     }
   }
 }
-.news{
-  &__title{
+.news {
+  &__title {
     text-align: center;
   }
-  &__inner{
+  &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
     row-gap: 24px;
   }
-  &__content{
+  &__content {
     width: 392px;
     height: 272px;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+.favourites {
+  &__inner {
+    padding: 24px 0 16px;
+  }
+  &__inner-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: #1a1e29;
+    margin-bottom: 24px;
+  }
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6a6a6a;
+  }
+  &__reset {
+    @extend %btn2;
+  }
+  .jq-selectbox {
+    width: 282px;
+  }
+  .jq-selectbox__select {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    color: #1A1E29;
+  }
+}
+.heart-wheel{
+  &__inner{
+    display: flex;
+    padding-bottom: 72px;
+    column-gap: 24px;
   }
 }
 .footer {

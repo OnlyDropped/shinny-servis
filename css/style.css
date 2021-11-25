@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-.catalof-filter__btn, .catalog-content__pagination-btn, .catalog-content__banner-link, .card-body .modal-content__close-btn, .card-description .tab-item .tab-review__btn, .card-content__link {
+.catalof-filter__btn, .catalog-content__pagination-btn, .catalog-content__banner-link, .card-body .modal-content__close-btn, .card-description .tab-item .tab-review__btn, .card-content__link, .favourites__reset {
   background: #fff;
   border: 1px solid #efd8c3;
   border-radius: 2px;
@@ -171,6 +171,7 @@ a {
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 32px 58px 48px;
+  z-index: 1111;
 }
 
 .header-nav .header-content h2 {
@@ -1295,7 +1296,7 @@ a {
   left: 0px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  top: 7px;
+  top: 10px;
 }
 
 .breadcrumbs-wrapper__list-item:first-child {
@@ -3188,7 +3189,7 @@ a {
 .news__content {
   width: 392px;
   height: 272px;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3198,6 +3199,65 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.favourites__inner {
+  padding: 24px 0 16px;
+}
+
+.favourites__inner-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #1a1e29;
+  margin-bottom: 24px;
+}
+
+.favourites__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.favourites__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 16px;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6a6a6a;
+}
+
+.favourites .jq-selectbox {
+  width: 282px;
+}
+
+.favourites .jq-selectbox__select {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  color: #1A1E29;
+}
+
+.heart-wheel__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 72px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
 }
 
 .footer {
