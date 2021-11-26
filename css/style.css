@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.header-nav .header-content__form-btn, .slider-card__link, .selection__link, .popular-disky__order-price, .sale__link, .about__info-link, .catalof-filter__link, .card-description .tab-item .tab-review__link, .cart-inner__calc-btn, .page-404__inner-link, .footer-info__link {
+.header-nav .header-content__form-btn, .slider-card__link, .selection__link, .popular-disky__order-price, .sale__link, .about__info-link, .catalof-filter__link, .card-description .tab-item .tab-review__link, .cart-inner__calc-btn, .page-404__inner-link, .account-inner .personal__save, .account-inner .parking-box__link, .footer-info__link {
   border: none;
   padding: 12px 24px;
   background: #ff7e00;
@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-.catalof-filter__btn, .catalog-content__pagination-btn, .catalog-content__banner-link, .card-body .modal-content__close-btn, .card-description .tab-item .tab-review__btn, .card-content__link, .favourites__reset {
+.catalof-filter__btn, .catalog-content__pagination-btn, .catalog-content__banner-link, .card-body .modal-content__close-btn, .card-description .tab-item .tab-review__btn, .card-content__link, .favourites__reset, .account-inner .personal__cancel, .account-inner .history-box__link {
   background: #fff;
   border: 1px solid #efd8c3;
   border-radius: 2px;
@@ -427,7 +427,7 @@ a {
   width: 96px;
   background: #1a1e29;
   border-radius: 16px;
-  top: -16px;
+  top: 9px;
   z-index: -1;
 }
 
@@ -1296,7 +1296,7 @@ a {
   left: 0px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  top: 10px;
+  top: 7px;
 }
 
 .breadcrumbs-wrapper__list-item:first-child {
@@ -3248,7 +3248,7 @@ a {
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
-  color: #1A1E29;
+  color: #1a1e29;
 }
 
 .heart-wheel__inner {
@@ -3258,6 +3258,325 @@ a {
   padding-bottom: 72px;
   -webkit-column-gap: 24px;
           column-gap: 24px;
+}
+
+.account {
+  padding-bottom: 72px;
+}
+
+.account-inner__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #1a1e29;
+  margin-bottom: 24px;
+}
+
+.account-inner__tabs {
+  width: 100%;
+}
+
+.account-inner .tabs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.account-inner .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 288px;
+  width: 100%;
+  border-left: 2px solid #e5e5e5;
+}
+
+.account-inner .tab {
+  padding: 8px 13px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4c65bd;
+  cursor: pointer;
+}
+
+.account-inner .tabs-wrapper .active {
+  color: red;
+  border-left: 2px solid #ff7e00;
+  margin-left: -2px;
+}
+
+.account-inner .tabs-content {
+  max-width: 808px;
+  width: 100%;
+}
+
+.account-inner .tab-item {
+  width: 100%;
+}
+
+.account-inner .personal {
+  width: 100%;
+  padding-top: 8px;
+}
+
+.account-inner .personal__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1a1e29;
+  margin-bottom: 24px;
+}
+
+.account-inner .personal__form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.account-inner .personal__form-input {
+  padding: 12px 16px;
+}
+
+.account-inner .personal__form-input::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1a1e29;
+}
+
+.account-inner .personal__form-input:-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1a1e29;
+}
+
+.account-inner .personal__form-input::-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1a1e29;
+}
+
+.account-inner .personal__form-input::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1a1e29;
+}
+
+.account-inner .personal input:hover {
+  color: #000;
+  border-color: #e5e5e5;
+}
+
+.account-inner .personal__btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account-inner .parking {
+  width: 100%;
+  padding-top: 8px;
+}
+
+.account-inner .parking-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 24px;
+}
+
+.account-inner .parking-box__img {
+  background-position: center;
+  width: 136px;
+  height: 96px;
+}
+
+.account-inner .parking-box__img-bg {
+  width: 136px;
+  height: 96px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.account-inner .parking-box__info-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1e29;
+  margin-bottom: 4px;
+}
+
+.account-inner .parking-box__info-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6a6a6a;
+  margin-bottom: 16px;
+}
+
+.account-inner .parking-box__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.account-inner .parking-box__block-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1a1e29;
+}
+
+.account-inner .parking-box__block-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4c65bd;
+  border-bottom: 1px dashed #4c65bd;
+}
+
+.account-inner .history-box {
+  padding-top: 8px;
+}
+
+.account-inner .history-box__table {
+  border: 1px solid grey;
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-inner .history-box tr:first-child {
+  background-color: #ffe9d5;
+  border-bottom: none;
+}
+
+.account-inner .history-box tr:not(:first-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.account-inner .history-box th {
+  padding: 12px 16px;
+  font-weight: 400;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1e29;
+}
+
+.account-inner .history-box__table-paid {
+  color: #12bb9d !important;
+}
+
+.account-inner .history-box__table-cancel {
+  color: #df3c18 !important;
+}
+
+.account-inner .history-box__link {
+  display: block;
+  margin-top: 24px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.account-inner .cash-back {
+  width: 100%;
+}
+
+.account-inner .cash-back__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  margin-bottom: 8px;
+}
+
+.account-inner .cash-back__quantities {
+  width: 152px;
+  border: 1px solid #ff7e00;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+  color: #1a1e29;
+  text-align: center;
+}
+
+.account-inner .cash-back__number {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.account-inner .cash-back__span {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.account-inner .cash-back__info-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1e29;
+}
+
+.account-inner .cash-back__info-link {
+  color: #4c65bd;
+}
+
+.account-inner .cash-back__box-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4c65bd;
+  border-bottom: 1px dashed #4c65bd;
 }
 
 .footer {
