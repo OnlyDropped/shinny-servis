@@ -5,14 +5,119 @@
     verticalSwiping: true,
     autoplay: true,
     autoplaySpeed: 8000,
+      responsive: [
+    {
+      breakpoint: 425,
+      settings: {
+        vertical: false,
+        autoplay: false,
+        verticalSwiping: false
+      }
+    },
+    {
+      breakpoint: 376,
+      settings: {
+        vertical: false,
+        autoplay: true,
+        verticalSwiping: false
+      }
+    },
+    {
+      breakpoint: 321,
+      settings: {
+        vertical: false,
+        autoplay: false,
+        verticalSwiping: false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
   });
+
+$('.tabcontent__form-select').styler();
+
+  $(".header-nav__hamburger").on("click", function () {
+  $(".header-nav__list").toggleClass("header-nav__list--active");
+  });
+
+
+$(".footer-item__title").on("click", function () {
+  $(this).siblings().slideToggle();
+  $(this).toggleClass('active');
+});
+
+
+	$('.tabs-wrapper').each(function() {
+	let ths = $(this);
+	ths.find('.tab-item').not(':first').hide();
+	ths.find('.tab').click(function() {
+		ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass('active');
+});
+
   $('.sale-slider').slick({
     cssEase: 'linear',
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 8000,
+    //autoplay: true,
+    //autoplaySpeed: 8000,
+    responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplaySpeed: 2000,
+        centerMode: false,
+      }
+    },  
+    {
+      breakpoint: 769,
+      settings: {
+        autoplaySpeed: 2000,
+        centerMode: true,
+        centerPadding: '40px',
+        variableWidth: true
+      }
+    }, 
+    {
+      breakpoint: 426,
+      settings: {
+        autoplaySpeed: 2000,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 376,
+      settings: {
+        autoplaySpeed: 2000,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 321,
+      settings: {
+        autoplaySpeed: 2000,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
   });
 $(".star").rateYo({
     rating: 4.6,
@@ -120,14 +225,6 @@ span.onclick = function() {
 
 
 
-	$('.tabs-wrapper').each(function() {
-	let ths = $(this);
-	ths.find('.tab-item').not(':first').hide();
-	ths.find('.tab').click(function() {
-		ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-	}).eq(0).addClass('active');
-});
 
 
 
@@ -160,7 +257,7 @@ function openCity(evt, cityName) {
 document.getElementById("defaultOpen").click();
 
 
-$('.tabcontent__form-select').styler();
+
 
 function myFunction() {
   var dots = document.getElementById("dots");

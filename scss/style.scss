@@ -7,6 +7,21 @@
 }
 .header-nav {
   padding: 0px 16px;
+  &__hamburger {
+    display: none;
+  }
+  &__media-search {
+    display: none;
+  }
+  &__account {
+    display: none;
+  }
+  .boxx {
+    display: none;
+  }
+  .logo-small {
+    display: none;
+  }
   &__list {
     display: flex;
     justify-content: space-between;
@@ -457,6 +472,11 @@
 }
 .popular-wheels {
   padding-bottom: 40px;
+  .tabs-item{
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    column-gap: 24px;
+  }
   .tabs {
     display: flex;
     justify-content: center;
@@ -479,10 +499,6 @@
   .tabs-content {
     display: flex;
     margin-bottom: 32px;
-  }
-  .tabs-item {
-    display: flex;
-    justify-content: space-between;
   }
   &__link {
     display: block;
