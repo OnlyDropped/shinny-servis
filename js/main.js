@@ -1,10 +1,13 @@
   $('.slider').slick({
     cssEase: 'linear',
     arrows: false,
-    vertical: true,
-    verticalSwiping: true,
+    vertical: false,
+    verticalSwiping: false,
+    infinite: false,
+    draggable: false,
+    fade: true,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 4000,
       responsive: [
     {
       breakpoint: 425,
@@ -279,4 +282,7 @@ function myFunction() {
 $(".js-range-slider").ionRangeSlider();
 
 
+
+
+ 
 
